@@ -1,2 +1,2 @@
-# Projeto---Sistema-banc-rio-otimizado-
-Projeto utilizado para estudo e praticar python, solicitado no bootcamp da DIO.
+# Sistema-bancario-otimizado
+Projeto feito para bootcamp da DIO, utilizado para estudos e praticas de python.
