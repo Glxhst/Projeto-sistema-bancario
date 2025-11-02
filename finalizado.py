@@ -15,7 +15,8 @@ def exibir_menu():
     return input(menu)
 
 
-def realizar_deposito(saldo, valor, extrato):
+
+def realizar_deposito(saldo, valor, extrato, /):
     if valor <= 0:
         print("Valor inválido. O depósito deve ser maior que zero.")
     else:
@@ -25,7 +26,7 @@ def realizar_deposito(saldo, valor, extrato):
     return saldo, extrato
 
 
-def realizar_saque(saldo, valor, extrato, limite, saques_realizados, max_saques):
+def realizar_saque(*, saldo, valor, extrato, limite, saques_realizados, max_saques):
     if valor <= 0:
         print("Valor inválido para saque.")
     elif valor > saldo:
@@ -42,7 +43,7 @@ def realizar_saque(saldo, valor, extrato, limite, saques_realizados, max_saques)
     return saldo, extrato, saques_realizados
 
 
-def mostrar_extrato(saldo, extrato):
+def mostrar_extrato(saldo, /, *, extrato):
     print("\n========== EXTRATO ==========")
     print(extrato if extrato else "Nenhuma movimentação registrada.")
     print(f"\nSaldo atual: R$ {saldo:.2f}")
